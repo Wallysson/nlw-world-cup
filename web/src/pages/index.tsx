@@ -5,6 +5,7 @@ import usersAvatarExampleImage from '../assets/users-avatar-example.png'
 import iconCheckImg from '../assets/icon-check.svg'
 import { api } from '../lib/axios'
 import { FormEvent, useState } from 'react'
+import Link from 'next/link'
 
 interface HomeProps {
   poolCount: number
@@ -72,6 +73,12 @@ export default function Home({ poolCount, guessCount, userCount }: HomeProps) {
         <p className="text-gray-300 text-small mt-4 leading-relaxed">
           Após criar seu bolão, você receberá um código único que poderá usar
           para convidar outras pessoas 🚀
+        </p>
+
+        <p className="text-gray-200 text-small mt-4 leading-relaxed">
+          <Link href="/countdown">
+            Confira aqui quantos dias faltam para a copa do mundo! ⏳
+          </Link>
         </p>
 
         <div className="mt-10 pt-10 border-t border-gray-600 flex items-center justify-between text-gray-100">
